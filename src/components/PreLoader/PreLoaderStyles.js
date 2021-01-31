@@ -22,7 +22,7 @@ const Loader = styled.div`
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: #3399ff;
+  background-color: #fa8072;
   border-radius: 50%;
   display: inline-block;
   animation: ${cssloadMotion} 1s cubic-bezier(0.77, 0, 0.175, 1) infinite;
