@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from '../../redux/phonebook/phonebook-action';
+
+import { addUserContact } from '../../redux/phonebook/phonebook-operations';
 import { getContacts } from '../../redux/phonebook/phonebook-selectors';
 import { Form, LabelForm, InputForm, Button } from './ContactFormStyles';
 
@@ -39,7 +40,7 @@ const ContactForm = () => {
       alert(`${name} is already in contact`);
     } else {
       const newContact = { name, number };
-      dispatch(addContact(newContact));
+      dispatch(addUserContact(newContact));
     }
 
     reset();
