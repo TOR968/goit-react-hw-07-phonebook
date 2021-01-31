@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { filter } from '../../redux/phonebook/phonebook-selectors';
+
 import { filterContact } from '../../redux/phonebook/phonebook-action';
+import { filter } from '../../redux/phonebook/phonebook-selectors';
 import { FilterLabel, FilterInput } from './FilterStyles';
 
 const Filter = () => {
