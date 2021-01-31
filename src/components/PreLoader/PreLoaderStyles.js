@@ -1,7 +1,36 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-const LoaderContainer = styled.div`
-  margin: 0 auto;
+const cssloadMotion = keyframes`
+	0% {
+		transform: translateX(0) scale(1);
+	}
+	25% {
+		transform: translateX(-49px) scale(0.3);
+	}
+	50% {
+		transform: translateX(0) scale(1);
+	}
+	75% {
+		transform: translateX(49px) scale(0.3);
+	}
+	100% {
+		transform: translateX(0) scale(1);
+	}
 `;
 
-export default LoaderContainer;
+const Loader = styled.div`
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #3399ff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: ${cssloadMotion} 1s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  -o-animation: ${cssloadMotion} 1s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  -ms-animation: ${cssloadMotion} 1s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  -webkit-animation: ${cssloadMotion} 1s cubic-bezier(0.77, 0, 0.175, 1)
+    infinite;
+  -moz-animation: ${cssloadMotion} 1s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+`;
+
+export { Loader };
